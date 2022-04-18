@@ -37,6 +37,23 @@ android {
         jvmTarget = '11'
     }
 
+    flavorDimensions "dummy", "distribute"
+    productFlavors {
+        dummyFoo {
+            dimension "dummy"
+        }
+        dummyBar {
+            dimension "dummy"
+        }
+        appCenter {
+            dimension "distribute"
+        }
+
+        googlePlay {
+            dimension "distribute"
+        }
+    }
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
